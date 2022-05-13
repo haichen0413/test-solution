@@ -12,7 +12,7 @@ function arrToObj(data) {
     return Object.assign({}, ...data.map(([key, val]) => ({ [key]: val })));
 }
 
-exports.stripPrivateProperties = (filters, users) => users.map(user) => {
+exports.stripPrivateProperties = (filters, users) => users.map(user => {
     const userFilter = Object.entries(user).filter([itemKey] => !filters.includes(itemKey))
     return arrToObj(userFilter)
 };
